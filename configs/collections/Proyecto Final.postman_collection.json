@@ -1,0 +1,755 @@
+{
+	"info": {
+		"_postman_id": "541314f8-8ee2-474d-a74b-1a63ff75975b",
+		"name": "Proyecto Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42631856"
+	},
+	"item": [
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Joaquin\",\r\n    \"surname\": \"Gonzalez\",\r\n    \"email\": \"jgonzalez@gmail.com\",\r\n    \"phone\": \"12345678\",\r\n    \"password\": \"1234567890\",\r\n    \"role\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"acarrillo@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE  ONLY ADMIN",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ODE4YThhNTVmY2I4ODdjODliMjQiLCJpYXQiOjE3NDExMjg0MzksImV4cCI6MTc0MTEzNTYzOX0.vnP9mry_YZY6Amc3XnS03jNiWVd_fJh_kGXSys6Nbew",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Alejandro\",\r\n    \"surname\": \"Carrillo\",\r\n    \"email\": \"acarrillo@gmail.com\",\r\n    \"phone\": \"12345678\",\r\n    \"password\": \"12345678\",\r\n    \"role\": \"ADMIN_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/users/updateAdmin/67c7813b8a55fcb887c89b21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"users",
+								"updateAdmin",
+								"67c7813b8a55fcb887c89b21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE OWNER ONLY",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ODE4YThhNTVmY2I4ODdjODliMjQiLCJpYXQiOjE3NDExMjg0MzksImV4cCI6MTc0MTEzNTYzOX0.vnP9mry_YZY6Amc3XnS03jNiWVd_fJh_kGXSys6Nbew",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Joaquin\",\r\n    \"surname\": \"Gonzalez\",\r\n    \"email\": \"egonzalez@gmail.com\",\r\n    \"phone\": \"12345678\",\r\n    \"password\": \"12345678\",\r\n    \"role\": \"USER_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/users//updateOwner/67c7818a8a55fcb887c89b24",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"users",
+								"",
+								"updateOwner",
+								"67c7818a8a55fcb887c89b24"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ONLY ADMIN",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZTdlYjk0NzcxOGFmZmE4ZTgyNWEiLCJpYXQiOjE3NDEyMTk5MjksImV4cCI6MTc0MTIyNzEyOX0.zAlq-FI8i_ENKF2jwNDSbpt8DmLq19sDOxTnzDFT-aE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/users/deleteAdmin/67c8e7ad35c607d99cbaf648",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"users",
+								"deleteAdmin",
+								"67c8e7ad35c607d99cbaf648"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE OWNER ONLY",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZThkNDk0NzcxOGFmZmE4ZTgyNjMiLCJpYXQiOjE3NDEyMjAwNzIsImV4cCI6MTc0MTIyNzI3Mn0.3Vhlw650QYXoifLPJ5gDir15grhTssq9u2OpvgQhoN8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/users/deleteOwner/67c8e8d4947718affa8e8263",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"users",
+								"deleteOwner",
+								"67c8e8d4947718affa8e8263"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CATEGORIES",
+			"item": [
+				{
+					"name": "NEW CATEGORY",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNzhhOTg3YTc1MDg1MTFjZDdlYTEiLCJpYXQiOjE3NDEzODc5NTcsImV4cCI6MTc0MTM5NTE1N30.hBo87IiWkYhy7nWDWDETC0N6QTNWZu7A85aqwv2amN4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Computadoras\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/categories/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIST ALL CATEGORIES",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNzhhOTg3YTc1MDg1MTFjZDdlYTEiLCJpYXQiOjE3NDEzODc5NTcsImV4cCI6MTc0MTM5NTE1N30.hBo87IiWkYhy7nWDWDETC0N6QTNWZu7A85aqwv2amN4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/categories/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE CATEGORY",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZTdlYjk0NzcxOGFmZmE4ZTgyNWEiLCJpYXQiOjE3NDEyMzAzMTEsImV4cCI6MTc0MTIzNzUxMX0.6kVc7wXo2renVNlwCqHRHst8j_loHC2K57mdc1OulOg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Juguetes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/categories/67c8faa3902b0bf05480934b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"categories",
+								"67c8faa3902b0bf05480934b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE CATEGORY",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzFmODZjN2RmZDc0ZjMyZGI1NjkiLCJpYXQiOjE3NDEzMTk4NzAsImV4cCI6MTc0MTMyNzA3MH0.hWV0qGxrsX_S3t8JQYVQtg9oUWlO7ke_hOXazoFZM6Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/categories/67ca494163925b4649e321c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"categories",
+								"67ca494163925b4649e321c7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PRODUCTS",
+			"item": [
+				{
+					"name": "NEW PRODUCT",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNzhhOTg3YTc1MDg1MTFjZDdlYTEiLCJpYXQiOjE3NDE0MDIxMDcsImV4cCI6MTc0MTQwOTMwN30.VYUxgnXrYAJNw8dZbTT0nPh0Uoyh2JecoN56n-9O_J0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Samsung A15\",\r\n    \"description\": \"SnapDragon gen 1\",\r\n    \"stock\": 30,\r\n    \"sold\": 11,\r\n    \"price\": 4000,\r\n    \"category\": \"Telefonos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE PRODUCT",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzFmODZjN2RmZDc0ZjMyZGI1NjkiLCJpYXQiOjE3NDEzMTk4NzAsImV4cCI6MTc0MTMyNzA3MH0.hWV0qGxrsX_S3t8JQYVQtg9oUWlO7ke_hOXazoFZM6Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"name\": \"a\",\r\n    \"description\": \"a\",\r\n    \"stock\": 16,\r\n    \"sold\": 6,\r\n    \"price\": 20000,\r\n    \"category\": \"Computadoras\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/products/67ca3e83349165198a99512a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"products",
+								"67ca3e83349165198a99512a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE PRODUCT",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzFmODZjN2RmZDc0ZjMyZGI1NjkiLCJpYXQiOjE3NDEzMDYzNzEsImV4cCI6MTc0MTMxMzU3MX0.TvaszZ4mXS6qU9oPblg1Fr6rp0ewddpN9MvMmN7g7qk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/products/67ca32646c7dfd74f32db572",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"products",
+								"67ca32646c7dfd74f32db572"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCTS SIN CATEGORIA",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzFmODZjN2RmZDc0ZjMyZGI1NjkiLCJpYXQiOjE3NDEzMTk4NzAsImV4cCI6MTc0MTMyNzA3MH0.hWV0qGxrsX_S3t8JQYVQtg9oUWlO7ke_hOXazoFZM6Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/products/sinCategoria?limite=5&desde=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"products",
+								"sinCategoria"
+							],
+							"query": [
+								{
+									"key": "limite",
+									"value": "5"
+								},
+								{
+									"key": "desde",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIST ALL PRODUCTS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNzhhOTg3YTc1MDg1MTFjZDdlYTEiLCJpYXQiOjE3NDEzOTE3MDksImV4cCI6MTc0MTM5ODkwOX0.AZcfvMNwN8zGIceE6oWkYhlDql1Qe0XV0gBVlZen4hA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIST PRODUCT BY ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzFmODZjN2RmZDc0ZjMyZGI1NjkiLCJpYXQiOjE3NDEzMTc3MjMsImV4cCI6MTc0MTMyNDkyM30.3DcJOE0jhvw4Takc_pdheVmLp6mGLU-W8VBSDLwZKxk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/products/findProduct/67ca3e83349165198a99512a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"products",
+								"findProduct",
+								"67ca3e83349165198a99512a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIST PRODUCT ZERO STOCK",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzFmODZjN2RmZDc0ZjMyZGI1NjkiLCJpYXQiOjE3NDEzMTc3MjMsImV4cCI6MTc0MTMyNDkyM30.3DcJOE0jhvw4Takc_pdheVmLp6mGLU-W8VBSDLwZKxk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/products/sinStock?limite=5&desde=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"products",
+								"sinStock"
+							],
+							"query": [
+								{
+									"key": "limite",
+									"value": "5"
+								},
+								{
+									"key": "desde",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIST TOP PRODUCTS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzFmODZjN2RmZDc0ZjMyZGI1NjkiLCJpYXQiOjE3NDEzMTk4NzAsImV4cCI6MTc0MTMyNzA3MH0.hWV0qGxrsX_S3t8JQYVQtg9oUWlO7ke_hOXazoFZM6Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/products/topProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"products",
+								"topProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIST PRODUCTS BY NAME",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BILLS",
+			"item": [
+				{
+					"name": "NEW BILL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiODZkYmIxNDM3ZDA2ODNlN2ExZTEiLCJpYXQiOjE3NDEzOTE1OTIsImV4cCI6MTc0MTM5ODc5Mn0.rfr3T-al6-kDAMQxxARJXHYQ11FKmJs0t24ijLXVmS8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Alejandro\",\r\n    \"surname\": \"Carrillo\",\r\n    \"email\": \"acarrillo@gmail.com\",\r\n    \"client\": \"67cb86dbb1437d0683e7a1e1\",\r\n    \"cart\": [\r\n        {\r\n            \"productId\": \"67cb798c87a7508511cd7eaf\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"productId\": \"67cb79ce87a7508511cd7eb3\",\r\n            \"quantity\": 4\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/bills/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"bills",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PURCHASE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNzhhOTg3YTc1MDg1MTFjZDdlYTEiLCJpYXQiOjE3NDEzOTE3MDksImV4cCI6MTc0MTM5ODkwOX0.AZcfvMNwN8zGIceE6oWkYhlDql1Qe0XV0gBVlZen4hA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\": {\r\n        \"id\":\"67cb8717b1437d0683e7a1e9\",\r\n        \"name\": \"Alejandro\",\r\n        \"surname\": \"Carrillo\",\r\n        \"email\": \"acarrillo@gmail.com\"\r\n    },\r\n    \"products\": [\r\n        {\r\n            \"productId\": \"67cb798c87a7508511cd7eaf\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"productId\": \"67cb79ce87a7508511cd7eb3\",\r\n            \"quantity\": 4\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/bills/purchase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"bills",
+								"purchase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIST BILL BY CLIENT",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE BILL",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNzg4ZDg3YTc1MDg1MTFjZDdlOWUiLCJpYXQiOjE3NDE0MDI0NDAsImV4cCI6MTc0MTQwOTY0MH0.A8DjDA-gvFx0xFgz3KpyZ7pXJgt1XGmMrxrjcUdaJwM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"total\": [\r\n        {\r\n            \"productId\": \"67cbb0042fd53325944123ba\",\r\n            \"name\": \"Samsung A15\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/OnlineSaleSystem/v1/bills/67cb8717b1437d0683e7a1e9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"OnlineSaleSystem",
+								"v1",
+								"bills",
+								"67cb8717b1437d0683e7a1e9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND BILL BY USER",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
