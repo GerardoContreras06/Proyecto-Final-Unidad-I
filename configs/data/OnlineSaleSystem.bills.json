@@ -1,0 +1,101 @@
+[{
+  "_id": {
+    "$oid": "67cb7c32bf00a3088141b135"
+  },
+  "nameOfClient": "Gerardo",
+  "surnameOfClient": "Contreras",
+  "emailOfClient": "gerardo@gmail.com",
+  "userRef": {
+    "$oid": "67cb788d87a7508511cd7e9e"
+  },
+  "total": [
+    {
+      "productId": {
+        "$oid": "67cb798c87a7508511cd7eaf"
+      },
+      "name": "Iphone 16 PRO MAX",
+      "price": 11000,
+      "quantity": 2,
+      "subtotal": 22000
+    },
+    {
+      "productId": {
+        "$oid": "67cb79ce87a7508511cd7eb3"
+      },
+      "name": "Huawei MateBook D15",
+      "price": 6000,
+      "quantity": 4,
+      "subtotal": 24000
+    }
+  ],
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-03-07T23:07:30.579Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T23:07:30.579Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb8717b1437d0683e7a1e9"
+  },
+  "name": "Alejandro",
+  "surname": "Carrillo",
+  "email": "acarrillo@gmail.com",
+  "client": {
+    "$oid": "67cb86dbb1437d0683e7a1e1"
+  },
+  "total": [
+    {
+      "productId": "67cbb0042fd53325944123ba",
+      "name": "Samsung A15",
+      "quantity": 1
+    }
+  ],
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-03-07T23:53:59.708Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:53:27.444Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb923692f3c7aa28513091"
+  },
+  "name": "Alejandro",
+  "surname": "Carrillo",
+  "email": "acarrillo@gmail.com",
+  "client": {
+    "$oid": "67cb8717b1437d0683e7a1e9"
+  },
+  "total": [
+    {
+      "productId": {
+        "$oid": "67cb798c87a7508511cd7eaf"
+      },
+      "name": "Iphone 16 PRO MAX",
+      "quantity": 2,
+      "price": 11000,
+      "subtotal": 22000
+    },
+    {
+      "productId": {
+        "$oid": "67cb79ce87a7508511cd7eb3"
+      },
+      "name": "Huawei MateBook D15",
+      "quantity": 4,
+      "price": 6000,
+      "subtotal": 24000
+    }
+  ],
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-03-08T00:41:26.551Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T00:41:26.551Z"
+  }
+}]

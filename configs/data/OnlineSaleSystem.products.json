@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "67cb798c87a7508511cd7eaf"
+  },
+  "name": "Iphone 16 PRO MAX",
+  "description": "1 Tera de almacenamiento",
+  "stock": 94,
+  "sold": 80,
+  "price": 11000,
+  "category": {
+    "$oid": "67cb790f87a7508511cd7ea5"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-03-07T22:56:12.611Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T00:41:26.531Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb79ce87a7508511cd7eb3"
+  },
+  "name": "Huawei MateBook D15",
+  "description": "Core I5",
+  "stock": 68,
+  "sold": 32,
+  "price": 6000,
+  "category": {
+    "$oid": "67cb792387a7508511cd7ea8"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-03-07T22:57:18.479Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T00:41:26.542Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cbb0042fd53325944123ba"
+  },
+  "name": "Samsung A15",
+  "description": "SnapDragon gen 1",
+  "stock": 30,
+  "sold": 11,
+  "price": 4000,
+  "category": {
+    "$oid": "67cb790f87a7508511cd7ea5"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-03-08T02:48:36.265Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:48:36.265Z"
+  }
+}]
