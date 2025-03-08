@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "67cb790f87a7508511cd7ea5"
+  },
+  "name": "Telefonos",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-03-07T22:54:07.555Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T22:54:07.555Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb792387a7508511cd7ea8"
+  },
+  "name": "Computadoras",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-03-07T22:54:27.701Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T22:54:27.701Z"
+  }
+}]
